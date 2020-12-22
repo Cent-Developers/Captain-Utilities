@@ -4,20 +4,26 @@ plugins {
 }
 
 group 'com.discordbots'
-version '1.0'
+version '1.1.1'
 
 repositories {
     mavenCentral()
 }
 
+test {
+    useJUnitPlatform()
+}
+
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.3'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.6.3'
     implementation 'org.javacord:javacord:3.1.2'
     runtimeOnly 'org.apache.logging.log4j:log4j-core:2.11.0'
 }
 
-task stage(dependsOn: ['build','shadowJar', 'clean'])
+task stage(dependsOn: ['build','shadowJar', 'clean', 'test'])
 build.mustRunAfter clean
+build.mustRunAfter test
 
 jar {
     manifest{
