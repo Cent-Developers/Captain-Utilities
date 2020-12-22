@@ -4,7 +4,7 @@
     <Properties>
         <Property name="filename">target/test.log</Property>
     </Properties>
-    <Filter type="ThresholdFilter" level="trace"/>
+    <Filter type="ThresholdFilter" level="warn"/>
 
     <Appenders>
         <Appender type="Console" name="STDOUT">
@@ -29,18 +29,18 @@
     </Appenders>
 
     <Loggers>
-        <Logger name="org.apache.logging.log4j.test1" level="debug" additivity="false">
+        <Logger name="org.apache.logging.log4j.test1" level="warn" additivity="false">
             <Filter type="ThreadContextMapFilter">
                 <KeyValuePair key="test" value="123"/>
             </Filter>
             <AppenderRef ref="STDOUT"/>
         </Logger>
 
-        <Logger name="org.apache.logging.log4j.test2" level="debug" additivity="false">
+        <Logger name="org.apache.logging.log4j.test2" level="warn" additivity="false">
             <AppenderRef ref="File"/>
         </Logger>
 
-        <Root level="trace">
+        <Root level="warn">
             <AppenderRef ref="STDOUT"/>
         </Root>
     </Loggers>
