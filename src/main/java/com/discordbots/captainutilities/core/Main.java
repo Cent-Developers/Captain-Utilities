@@ -18,7 +18,7 @@ public class Main
         DiscordApi Client = new DiscordApiBuilder().setToken(Token).login().join();
 
         System.out.println("Started Bot! Bot is in " + Client.getServers().toString() + " servers!");
-        System.out.println("Loading listeners: " + Client.getListeners().toString());
+        System.out.println("Loading listeners: " + Client.getListeners().values().toString());
 
         Client.addListener(new Ping());
         Client.addListener(new Help());

@@ -14,6 +14,6 @@ class PingTest
         //Description Check
         assertEquals("Tells the latency of the bot in ms", Ping.Description);
         //Usage Check
-        assertEquals("`!Ping`", Ping.Usage);
+        assertEquals("`>Ping`", Ping.Usage);
     }
 }

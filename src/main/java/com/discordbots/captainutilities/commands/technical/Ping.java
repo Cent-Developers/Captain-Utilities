@@ -13,7 +13,7 @@ public class Ping implements MessageCreateListener, Command
 {
     public static final String CommandName = "Ping";
     public static final String Description = "Tells the latency of the bot in ms";
-    public static final String Usage = "`!Ping`";
+    public static final String Usage = "`>Ping`";
 
     @Override
     public void onMessageCreate(MessageCreateEvent message)
@@ -32,19 +32,13 @@ public class Ping implements MessageCreateListener, Command
 
     private EmbedBuilder CreatePingEmbed(MessageCreateEvent message)
     {
-        Color PingEmbedColor = new Color(29, 233, 182);
+        Color PingEmbedColor = new Color(121, 99, 230);
         String GatewayLatency = message.getApi().getLatestGatewayLatency().toString();
         String RESTLatency = message.getApi().measureRestLatency().toString();
-
-        int GatewayLatencyInt = Integer.parseInt(GatewayLatency);
-        int RESTLatencyInt = Integer.parseInt(RESTLatency);
-
-        int AverageLatency = GatewayLatencyInt/2 + RESTLatencyInt/2;
 
         return new EmbedBuilder()
                 .setTitle("**Latency of the bot:** ")
                 .setDescription("This says the current latency of the bot:")
-                .addField("Average latency: ", AverageLatency + "ms", false)
                 .addField("Gateway latency: ", GatewayLatency + "ms", false)
                 .addField("REST latency:", RESTLatency + "ms", false)
                 .setFooter("You really shouldn't care about this, unless you know what it means!")
