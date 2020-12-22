@@ -32,9 +32,9 @@ public class Ping implements MessageCreateListener, Command
 
     private EmbedBuilder CreatePingEmbed(MessageCreateEvent message)
     {
-        Color PingEmbedColor = new Color(121, 99, 230);
-        String GatewayLatency = message.getApi().getLatestGatewayLatency().toString();
-        String RESTLatency = message.getApi().measureRestLatency().toString();
+        Color PingEmbedColor = new Color(201, 0, 0);
+        long GatewayLatency = message.getApi().getLatestGatewayLatency().toMillis();
+        String RESTLatency = message.getApi().measureRestLatency().toCompletableFuture().toString();
 
         return new EmbedBuilder()
                 .setTitle("**Latency of the bot:** ")
