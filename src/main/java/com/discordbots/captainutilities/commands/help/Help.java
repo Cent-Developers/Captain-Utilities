@@ -1,6 +1,7 @@
 package com.discordbots.captainutilities.commands.help;
 
 import com.discordbots.captainutilities.commands.technical.Ping;
+import com.discordbots.captainutilities.core.Main;
 import org.javacord.api.entity.message.embed.EmbedBuilder;
 import org.javacord.api.event.message.MessageCreateEvent;
 import org.javacord.api.listener.message.MessageCreateListener;
@@ -16,7 +17,10 @@ public class Help implements MessageCreateListener
     @Override
     public void onMessageCreate(MessageCreateEvent message)
     {
-        message.getChannel().sendMessage(CreateHelpEmbed(message));
+        if (message.getMessageContent().equalsIgnoreCase(Main.Prefix + "Help"))
+        {
+            message.getChannel().sendMessage(CreateHelpEmbed(message));
+        }
     }
 
     private EmbedBuilder CreateHelpEmbed(MessageCreateEvent message)
