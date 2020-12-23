@@ -11,7 +11,7 @@ import java.util.Arrays;
 
 public class Main
 {
-    public static final String Prefix = System.getenv().get("TOKEN");
+    public static final String Prefix = System.getenv().get("PREFIX");
 
     public static void main(String[] args)
     {
