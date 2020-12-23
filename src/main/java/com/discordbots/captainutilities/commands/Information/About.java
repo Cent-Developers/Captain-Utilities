@@ -17,7 +17,7 @@ public class About implements MessageCreateListener, ICommand
     @Override
     public String HelpCommandVar()
     {
-        return CommandName + "- " + Description + "Usage- " + Usage;
+        return CommandName + "- " + Description + "\nUsage- " + Usage;
     }
 
     @Override
