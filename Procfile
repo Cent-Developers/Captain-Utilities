@@ -1,1 +1,1 @@
-worker: java -jar build/libs/Captain-Utilities-1.1.1-all.jar
+worker: java -jar build/libs/Captain-Utilities-1.1.2-all.jar

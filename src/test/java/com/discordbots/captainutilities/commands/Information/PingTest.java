@@ -1,4 +1,5 @@
-import com.discordbots.captainutilities.commands.technical.Ping;
+package com.discordbots.captainutilities.commands.Information;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -10,7 +11,7 @@ class PingTest
     void CheckIfAllAttributesAreCorrect()
     {
         //Name check
-        Assertions.assertEquals("Ping", Ping.CommandName);
+        Assertions.assertEquals("**Ping**", Ping.CommandName);
         //Description Check
         assertEquals("Tells the latency of the bot in ms", Ping.Description);
         //Usage Check

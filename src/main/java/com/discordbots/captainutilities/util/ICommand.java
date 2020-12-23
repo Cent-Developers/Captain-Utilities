@@ -1,6 +1,6 @@
 package com.discordbots.captainutilities.util;
 
-public interface Command
+public interface ICommand
 {
     //This interface contains few variables that helps us setup the help command
     String CommandName = "";
