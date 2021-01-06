@@ -6,6 +6,7 @@ public interface ICommand
     String CommandName = "";
     String Description = "";
     String Usage = "";
+    CommandAccessLevel commandAccessLevel = CommandAccessLevel.USER;
 
     String HelpCommandVar();
 
