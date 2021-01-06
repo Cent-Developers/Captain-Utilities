@@ -14,6 +14,6 @@ There are many ways your can help me! here are a few:
 and of course this is an ever-evolving project! Currently, this doesn't do much but it will soon!
 
 ##IMPORTANT:
-if you want to contribute then please be sure to read the (contributing Guide)[www.google.com] and follow them :)
+if you want to contribute then please be sure to read the (contributing Guide)[https://github.com/Cent-Developers/Captain-Utilities/blob/v1.2.1-dev/.github/contributing_guide.md] and follow them :)
 
-Also, if you want to open an issue please read the Issue Templates carefully before submitting it.. (Bug report template)[www.google.com], (feature request template)[www.google.com]
+Also, if you want to open an issue please read the Issue Templates carefully before submitting it.. (Bug report template)[https://github.com/Cent-Developers/Captain-Utilities/blob/v1.2.1-dev/.github/ISSUE_TEMPLATE/bug_report.md], (feature request template)[https://github.com/Cent-Developers/Captain-Utilities/blob/v1.2.1-dev/.github/ISSUE_TEMPLATE/feature_request.md]
