@@ -1,7 +1,6 @@
 package com.discordbots.captainutilities.commands.Information;
 
 import com.discordbots.captainutilities.core.Main;
-import com.discordbots.captainutilities.util.CommandAccessLevel;
 import com.discordbots.captainutilities.util.ICommand;
 import org.javacord.api.entity.message.embed.EmbedBuilder;
 import org.javacord.api.event.message.MessageCreateEvent;
@@ -14,11 +13,9 @@ import java.util.concurrent.TimeUnit;
 
 public class Ping implements MessageCreateListener, ICommand
 {
-    String CommandName = "**Ping**";
-    String Description = "Tells the latency of the bot in ms";
-    String Usage = "`>Ping`";
-
-    CommandAccessLevel commandAccessLevel = CommandAccessLevel.USER;
+    public static final String CommandName = "**Ping**";
+    public static final String Description = "Tells the latency of the bot in ms";
+    public static final String Usage = "`>Ping`";
 
     @Override
     public void onMessageCreate(MessageCreateEvent message)
@@ -32,7 +29,7 @@ public class Ping implements MessageCreateListener, ICommand
     @Override
     public String HelpCommandVar()
     {
-        return CommandName + "- " + Description + "\n Usage- " + Usage + "\nAccessLevel - " + commandAccessLevel;
+        return CommandName + "- " + Description + "\n Usage- " + Usage;
     }
 
     private void SendEmbed(MessageCreateEvent message)
@@ -47,7 +44,7 @@ public class Ping implements MessageCreateListener, ICommand
 
             EmbedBuilder PingEmbed = new EmbedBuilder()
                     .setTitle("**Latency of the bot:** ")
-                    .setDescription("**Pong!** :ping_pong:")
+                    .setDescription("This says the current latency of the bot:")
                     .addField("Gateway latency: ", GatewayLatency + "ms", false)
                     .addField("REST latency:",  Time.toMillis() + "ms", false)
                     .setFooter("You really shouldn't care about this, unless you know what it means!", message.getMessageAuthor().getAvatar())
